@@ -30,6 +30,11 @@
               </classpath>
               <test name="junit.TestCalculator" haltonfailure="no" outfile="TestCalculator_JUnitResult">
                 <formatter type="xml"/>
+				   <batchtest fork="yes" todir="reports/junit">
+            <fileset dir="${build.classes}">
+                <include name="**/*Test.class"/>
+            </fileset>
+        </batchtest>
               </test>
         </junit>
     </target>
